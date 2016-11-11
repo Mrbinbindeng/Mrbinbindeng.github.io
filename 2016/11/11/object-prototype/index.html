@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>object.prototype | Mrbinbindeng</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Object.prototype内的方法
+hasOwnproperty:  (是否有自己的特性)
+作用：
+判断一个对象是否含有自己的某个属性
+
+
+语法：
+对象. hasOwnproperty (要判断的属性名)
+
+
+返回值：
+boolean
+
+
+
+
+
+12345var obj = &amp;#123; a: 1 &amp;#125;;console.log(obj.hasOwnProperty(&apos;a&apos;));  /">
+<meta property="og:type" content="article">
+<meta property="og:title" content="object.prototype">
+<meta property="og:url" content="http://yoursite.com/2016/11/11/object-prototype/index.html">
+<meta property="og:site_name" content="Mrbinbindeng">
+<meta property="og:description" content="Object.prototype内的方法
+hasOwnproperty:  (是否有自己的特性)
+作用：
+判断一个对象是否含有自己的某个属性
+
+
+语法：
+对象. hasOwnproperty (要判断的属性名)
+
+
+返回值：
+boolean
+
+
+
+
+
+12345var obj = &amp;#123; a: 1 &amp;#125;;console.log(obj.hasOwnProperty(&apos;a&apos;));  /">
+<meta property="og:updated_time" content="2016-11-11T14:03:40.957Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="object.prototype">
+<meta name="twitter:description" content="Object.prototype内的方法
+hasOwnproperty:  (是否有自己的特性)
+作用：
+判断一个对象是否含有自己的某个属性
+
+
+语法：
+对象. hasOwnproperty (要判断的属性名)
+
+
+返回值：
+boolean
+
+
+
+
+
+12345var obj = &amp;#123; a: 1 &amp;#125;;console.log(obj.hasOwnProperty(&apos;a&apos;));  /">
+  
+    <link rel="alternative" href="/atom.xml" title="Mrbinbindeng" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dengbinbin</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/winnerweb/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dengbinbin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dengbinbin</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-object-prototype" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/11/object-prototype/" class="article-date">
+  	<time datetime="2016-11-11T14:00:39.000Z" itemprop="datePublished">2016-11-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      object.prototype
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Object-prototype内的方法"><a href="#Object-prototype内的方法" class="headerlink" title="Object.prototype内的方法"></a>Object.prototype内的方法</h1><ul>
+<li><code>hasOwnproperty</code>:  <strong>(是否有自己的特性)</strong><ul>
+<li>作用：<ul>
+<li>判断一个对象是否含有自己的某个属性</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li><code>对象. hasOwnproperty (要判断的属性名)</code></li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>boolean</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</div><div class="line"><span class="built_in">console</span>.log(obj.hasOwnProperty(<span class="string">'a'</span>));  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(obj.hasOwnProperty(<span class="string">'b'</span>));  <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(obj.hasOwnProperty(<span class="string">'constructor'</span>));  <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.hasOwnProperty(<span class="string">'hasOwnProperty'</span>));  <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>propertyIsEnumerable</code>: <strong>(特性是否可枚举)</strong><ul>
+<li>作用：<ul>
+<li>判断一个对象是否含有<strong>自己</strong>的某个属性，并且还判断这个属性<strong>是否可枚举(遍历)</strong>【双重判断，是<code>hasOwnproperty</code>的加强版】</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li><code>对象.  propertyIsEnumerable (要判断的属性名)</code></li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>boolean</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj2 = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</div><div class="line"><span class="built_in">console</span>.log(obj2.propertyIsEnumerable(<span class="string">'a'</span>));  <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj2.propertyIsEnumerable(<span class="string">'b'</span>)); <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj2.propertyIsEnumerable(<span class="string">'constructor'</span>));  <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.propertyIsEnumerable(<span class="string">'hasOwnProperty'</span>));  <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>isPrototypeOf()</code>:<strong>(判断是不是原型对象)</strong><ul>
+<li>作用：<ul>
+<li>判断一个<code>对象</code>是不是<code>另一个对象</code>的<strong>原型对象</strong>,如果传入的不是一个对象，或不是另一对象的原型，返回false</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li><code>被判断的对象. isPrototypeOf (对象)</code></li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>boolean</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">a</span> : <span class="number">1</span>&#125;;</div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Object</span>.prototype.isPrototypeOf( obj2 ) );  <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Object</span>.prototype.isPrototypeOf( <span class="built_in">Object</span> ) );  <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Function</span>.prototype.isPrototypeOf( <span class="built_in">Function</span> ) ); <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Function</span>.prototype.isPrototypeOf( <span class="built_in">Math</span> ) );  <span class="comment">// false，因为Math只继承Object.prototype</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p><code>toString</code>:<strong>(判断内置对象类型)</strong></p>
+<ul>
+<li><p>作用：</p>
+<ul>
+<li>根据方法执行时内部的this指向，返回一个类似于<code>[&quot;object  this指向的对象的类型名称&quot;]</code>字符串</li>
+<li>一般用来判断<code>ECMAScript</code>内置的十大对象类型<strong>(9大构造函数的实例 + Math)</strong></li>
+<li>在内置9大构造函数中，它们的<code>prototype</code>显示原型对象中，都定义了自己的<code>toString</code>方法，所以它们的实例会优先使用自己的<code>toString</code>方法</li>
+<li>通过这个字符串可以得知<strong>内部对象</strong>指向的类型</li>
+</ul>
+</li>
+<li><p>语法：</p>
+<ul>
+<li><code>Object.prototype.toString(要判断的对象)</code></li>
+<li>简写 <code>([]).toString.call(要判断的对象)</code></li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>boolean<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.prototype.toString(); <span class="comment">//Object.prototype 内部的toString方法，调用后返回字符串 '[object Object]'</span></div><div class="line"></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call([<span class="number">1</span>,<span class="number">2</span>]);</div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Array</span>);</div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Math</span>);</div><div class="line"><span class="comment">//利用 call 方法可以使 [1,2]、Array、Math等对象，使用Object.prototype的toString方法，来查看自己所属的类型</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/11/canvas/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          canvas
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/11/预解析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">预解析</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Dengbinbin
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
