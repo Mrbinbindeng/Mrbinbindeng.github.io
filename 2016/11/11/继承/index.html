@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>继承 | Mrbinbindeng</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="继承(继承方式)
+一个对象可以使用另一个对象的东西
+可以使用本不属于自己的东西
+代码的复用
+js中的原型就是对继承这个特性的实现
+
+[TOC]
+继承方式1、默认的原型继承(常用)
+动态修改原型对象，添加新方法也可继承
+添加完之后实例才可以用123function Fn() &amp;#123;&amp;#125;Fn.prototype.value = 100;var fn = new Fn();
+
+
+2、原型覆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="继承">
+<meta property="og:url" content="http://yoursite.com/2016/11/11/继承/index.html">
+<meta property="og:site_name" content="Mrbinbindeng">
+<meta property="og:description" content="继承(继承方式)
+一个对象可以使用另一个对象的东西
+可以使用本不属于自己的东西
+代码的复用
+js中的原型就是对继承这个特性的实现
+
+[TOC]
+继承方式1、默认的原型继承(常用)
+动态修改原型对象，添加新方法也可继承
+添加完之后实例才可以用123function Fn() &amp;#123;&amp;#125;Fn.prototype.value = 100;var fn = new Fn();
+
+
+2、原型覆">
+<meta property="og:updated_time" content="2016-11-11T13:54:41.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="继承">
+<meta name="twitter:description" content="继承(继承方式)
+一个对象可以使用另一个对象的东西
+可以使用本不属于自己的东西
+代码的复用
+js中的原型就是对继承这个特性的实现
+
+[TOC]
+继承方式1、默认的原型继承(常用)
+动态修改原型对象，添加新方法也可继承
+添加完之后实例才可以用123function Fn() &amp;#123;&amp;#125;Fn.prototype.value = 100;var fn = new Fn();
+
+
+2、原型覆">
+  
+    <link rel="alternative" href="/atom.xml" title="Mrbinbindeng" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dengbinbin</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/winnerweb/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dengbinbin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dengbinbin</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-继承" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/11/继承/" class="article-date">
+  	<time datetime="2016-11-11T13:53:21.000Z" itemprop="datePublished">2016-11-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      继承
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="继承-继承方式"><a href="#继承-继承方式" class="headerlink" title="继承(继承方式)"></a>继承(继承方式)</h1><ul>
+<li>一个对象可以使用另一个对象的东西</li>
+<li>可以使用本不属于自己的东西</li>
+<li>代码的复用</li>
+<li>js中的原型就是对继承这个特性的实现</li>
+</ul>
+<p>[TOC]</p>
+<h3 id="继承方式"><a href="#继承方式" class="headerlink" title="继承方式"></a>继承方式</h3><h5 id="1、默认的原型继承-常用"><a href="#1、默认的原型继承-常用" class="headerlink" title="1、默认的原型继承(常用)"></a>1、默认的原型继承(常用)</h5><ul>
+<li>动态修改原型对象，添加新方法也可继承</li>
+<li>添加完之后实例才可以用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function Fn() &#123;&#125;</div><div class="line">Fn.prototype.value = 100;</div><div class="line">var fn = new Fn();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="2、原型覆写-覆写prototype属性值【原型地址】-常用"><a href="#2、原型覆写-覆写prototype属性值【原型地址】-常用" class="headerlink" title="2、原型覆写(覆写prototype属性值【原型地址】)(常用)"></a>2、原型覆写(覆写prototype属性值【原型地址】)(常用)</h5><ul>
+<li>把构造函数.prototype指向修改为一个新的自定义对象</li>
+<li>书写方便，不用再用 . 的方式添加方法</li>
+<li><p>原型覆盖以后，实例继承自这个自定义的原型对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function Fn() &#123;&#125;</div><div class="line">Fn.prototype = &#123;</div><div class="line">	constructor : Fn,</div><div class="line">	value: 100,</div><div class="line">	func : function () &#123;</div><div class="line">		console.log(&quot;&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var fn = new Fn();</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>注意</strong></p>
+<ul>
+<li>相比默认原型对象，原型覆写没有<code>constructor</code>属性，可以给自定义对象添加<code>constructor</code>属性<strong>【constrcutor : 构造函数名】</strong>，以便模拟对象(实例)类型</li>
+<li>★覆写后注意代码顺序[先覆写，再创建对象]</li>
+<li>如果把原型覆写，写在创建(实例)对象之后，则实例无法访问覆盖后的原型对象（实例还是指向覆写前的对象）</li>
+<li>原型覆写是尽量使用新对象，不要使用已有的对象。<ul>
+<li>1、为了避免混淆</li>
+<li>2、如果修改了原型对象的方法，同时是也修改了已有对象的方法，这会造成一些未知的错误</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3、显示原型混入属性【可多继承】-常用-–-gt-组合式继承"><a href="#3、显示原型混入属性【可多继承】-常用-–-gt-组合式继承" class="headerlink" title="3、显示原型混入属性【可多继承】(常用)–&gt;组合式继承"></a>3、显示原型混入属性【可多继承】(常用)–&gt;<em>组合式继承</em></h5><ul>
+<li>extend方法可以把第二个对象的属性copy到第一个对象中</li>
+<li>copy继承【给原型copy东西】<ul>
+<li>不会需改构造函数原生的原型对象</li>
+<li>可以替代原型覆写，同时避免原型覆写的三个弊端</li>
+<li>可以实现多继承(继承自多个对象)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span>(<span class="params">o1, o2</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> ( <span class="keyword">var</span> key <span class="keyword">in</span> o2 ) &#123;</div><div class="line">        o1[key] = o2[key];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">	<span class="attr">add</span>: <span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(a+b)</div><div class="line">		&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fn</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">extend(Fn.prototype, obj);</div><div class="line">extend(Fn.prototype, &#123;</div><div class="line">    <span class="attr">value</span>: <span class="number">100</span></div><div class="line">&#125;);</div><div class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Fn();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="4、Object-create方法【会创建出一个新的对象】"><a href="#4、Object-create方法【会创建出一个新的对象】" class="headerlink" title="4、Object.create方法【会创建出一个新的对象】"></a>4、Object.create方法【会创建出一个新的对象】</h5><ul>
+<li><code>Object</code>是一个内置构造函数，自身有很多方法，其中有一个<code>create</code>方法，可以实现继承</li>
+<li><strong>IE8之前不支持</strong></li>
+<li><strong>语法：</strong> <code>构造函数名.prototype = Object.create(传入被继承对象)</code></li>
+<li><strong>返回值：</strong> 返回一个新对象，这个新对象继承于传入到 <code>create</code> 方法的那个<code>被继承的对象</code></li>
+<li><strong>作用：</strong> <code>创建一个新对象</code>，并且指定新对象继承的对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//兼容ie6,7,8写法</div><div class="line">//1、原生对象中提供方法</div><div class="line">if (!Object.create) &#123;</div><div class="line">	Object.create = function (obj) &#123;</div><div class="line">		function F () &#123;&#125;</div><div class="line">		F.prototype = obj;</div><div class="line">		return new F();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//2、统一的新方法(判断原生的是否支持，不支持则使用自己添加的方法)</div><div class="line">var create = function (obj) &#123;</div><div class="line">	if (Object.create) &#123;</div><div class="line">		return Object.create(obj);</div><div class="line">	&#125; else &#123;</div><div class="line">		function F () &#123;&#125;</div><div class="line">		F.prototype = obj;</div><div class="line">		return new F();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="5、借用Object-create方法，覆写显示原型"><a href="#5、借用Object-create方法，覆写显示原型" class="headerlink" title="5、借用Object.create方法，覆写显示原型"></a>5、借用Object.create方法，覆写显示原型</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">value</span>: <span class="number">100</span> &#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fn</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">Fn.prototype = <span class="built_in">Object</span>.create(obj);</div><div class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Fn();</div></pre></td></tr></table></figure>
+<h5 id="6、复合式原型继承"><a href="#6、复合式原型继承" class="headerlink" title="6、复合式原型继承"></a>6、复合式原型继承</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">PrFn</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">PrFn.prototype.value = <span class="number">100</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fn</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">Fn.prototype = <span class="keyword">new</span> PrFn()</div><div class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Fn();</div></pre></td></tr></table></figure>
+<h3 id="编程技巧"><a href="#编程技巧" class="headerlink" title="编程技巧"></a>编程技巧</h3><ul>
+<li><p>js中是对象与对象之间的继承</p>
+<ul>
+<li>一个对象<code>(obj2)</code>通过<code>obj2.__proto__ = obj1</code>可以指向另一个对象<code>(obj1)</code></li>
+</ul>
+</li>
+<li><p>copy继承【表面现象，和上面不一样】</p>
+<ul>
+<li>让一个对象继承另一个对象的属性，可以考虑把另一个对象的属性copy到这个对象身上【利用for  in 】</li>
+</ul>
+</li>
+<li><p>内置的属性不可枚举(遍历)</p>
+<ul>
+<li>可被遍历的，就叫枚举</li>
+<li>浏览器内置的属性，不可使用for in 遍历出来</li>
+<li>只把自己添加的属性遍历出来[例如：tostring()、valueof()、…]</li>
+</ul>
+</li>
+<li><p>函数代码复用(func2想要共用func1的代码)【构造函数借用 】</p>
+<ul>
+<li>把func1作为属性添加到func2的实例自身(<code>this.__func1__ = func1</code>)</li>
+<li>然后通过func2的实例调用func1，那么func1执行时里面的this就指向了func2的实例</li>
+<li><code>func1.apply(this,arguments)</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>只有变量才可被覆盖修改，对象不能被覆盖</strong></p>
+<h3 id="继承的规律："><a href="#继承的规律：" class="headerlink" title="继承的规律："></a>继承的规律：</h3><ul>
+<li>1、所有对象继承的终点，是<code>Object.prototype</code></li>
+<li>2、所有构造函数默认的显示原型<code>(prototype)</code>，都继承自<code>Object.prototype</code></li>
+<li>3、谁的实例，这个实例就继承谁的<code>prototype</code><ul>
+<li>所有函数，都被看成是Function的实例，所以都继承<code>Function.prototype</code></li>
+<li>所有正则，都被看成是RegExp的实例，所以都继承<code>RegExp.prototype</code></li>
+<li>所有数组，都被看成是Array的实例，所以都继承<code>Array.prototype</code></li>
+</ul>
+</li>
+<li>4、给<code>Object.prototype</code>扩展的东西，所有对象都可以用</li>
+<li>5、<strong>所有函数，都继承Function.prototype</strong></li>
+<li>6、<strong>实例中没有constructor属性</strong>，当实例要使用<code>constructor</code>属性时回去它的原型对象中找，找不到，再去上一级找，直到<code>object.prototype</code></li>
+</ul>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><ul>
+<li>本意：<ul>
+<li>用来判断一个对象是不是继承自另一个构造函数的实例</li>
+</ul>
+</li>
+<li>运算规则：<ul>
+<li>可以用来判断<strong>前一个对象</strong>是否继承自<strong>后一个构造函数</strong>的<strong>显示原型</strong></li>
+<li>判断<strong>左边对象</strong>的原型链结构中，是否存在<strong>右边构造函数</strong>的显示原型</li>
+</ul>
+</li>
+<li>例外：<ul>
+<li>把构造函数的显示原型覆写之后，此显示原型不在实例的原型链中</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li>对象 instanceof 构造函数</li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>boolean</li>
+</ul>
+</li>
+</ul>
+<h3 id="for-in"><a href="#for-in" class="headerlink" title="for  in"></a>for  in</h3><ul>
+<li>可以遍历一个对象<strong>继承的</strong>属性(<strong>必须是可枚举的</strong>)</li>
+</ul>
+<p><strong>构造函数默认的显示原型对象的类型，是此构造函数的名字 </strong></p>
+<h3 id="函数的属性"><a href="#函数的属性" class="headerlink" title="函数的属性"></a>函数的属性</h3><ul>
+<li><p><strong>arguments:</strong></p>
+<ul>
+<li>代表<strong>实参</strong>的伪数组对象，之前是fn 的属性需要通过  函数.arguments  使用(fn.arguments)，但已被废除，先已经是关键字，可以直接使用(arguments)</li>
+<li>callee:<ul>
+<li>会返回被调用的函数，就是返回函数自己</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>caller:</strong></p>
+<ul>
+<li>返回调用该函数的函数</li>
+</ul>
+</li>
+<li><p><strong>length:</strong></p>
+<ul>
+<li>代表<strong>形参</strong>个数</li>
+</ul>
+</li>
+<li><p><strong>name：</strong></p>
+<ul>
+<li>函数名</li>
+</ul>
+</li>
+</ul>
+<h3 id="in运算符"><a href="#in运算符" class="headerlink" title="in运算符"></a>in运算符</h3><ul>
+<li>判断一个对象能否使用某个属性</li>
+<li>语法：<ul>
+<li><code>&#39;属性名&#39;   in    对象</code></li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>boolean</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;aa : 11&#125;;</div><div class="line"></div><div class="line">console.log(&apos;aa&apos; in obj);//true</div><div class="line">console.log(&apos;bb&apos; in obj);//false</div><div class="line">console.log(&apos;hasOwnproperty&apos; in obj);//true</div></pre></td></tr></table></figure>
+<h3 id="delete运算符"><a href="#delete运算符" class="headerlink" title="delete运算符"></a>delete运算符</h3><ul>
+<li>作用：<ul>
+<li>删除对象的属性</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li><code>delete  对象.属性名</code></li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>boolean(<strong>成功删除返回true</strong>)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;aa : 11,bb : 22,cc:232,2 :12&#125;;</div><div class="line">delete obj.bb;</div><div class="line">delete obj[&quot;cc&quot;];</div><div class="line">delete obj[2];</div><div class="line">console.log(obj);</div><div class="line">// obj &#123;aa : 11&#125;</div></pre></td></tr></table></figure>
+<h3 id="Function-的使用"><a href="#Function-的使用" class="headerlink" title="Function 的使用"></a>Function 的使用</h3><ul>
+<li><code>Function</code>创建函数的语法：<ul>
+<li><code>new Function( arg_name1, arg_name2, arg_name3, functionBody )</code></li>
+<li>前面可以定义任意数量的形参，最后一个参数代表函数的代码体。</li>
+<li><strong>注意：这些参数必须是字符串的形式。</strong></li>
+<li>返回值：一个新创建的函数实例。</li>
+</ul>
+</li>
+<li>如果使用Function创建函数，很繁琐，一般不会采纳。但是这种方式有一个亮点，就是会把字符串当做代码执行。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var addObj = new Function(&apos;a&apos;, &apos;b&apos;, &apos;console.log(a + b);&apos;);</div><div class="line">addObj(10, 60);</div></pre></td></tr></table></figure>
+<h3 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h3><ul>
+<li>可以直接把字符串当做代码执行</li>
+<li>语法：<ul>
+<li><code>eval(字符串代码)</code></li>
+<li><code>eval(&#39;console.log(123223)&#39;);</code></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/11/自调函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">自调函数</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Dengbinbin
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
