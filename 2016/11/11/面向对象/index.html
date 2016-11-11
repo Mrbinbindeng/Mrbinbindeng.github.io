@@ -3,18 +3,88 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mrbinbindeng</title>
+  <title>面向对象 | Mrbinbindeng</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Mrbinbindeng">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="面向对象[TOC]
+1、什么是面向对象
+对象：
+你所想用编程语言来描述的 事物
+
+
+对面向过程的封装。函数是一个封装，面向对象是比函数封装更高级的封装
+利用对象解决我问题
+
+2、与面向过程的区别
+面向对象封装了面向过程
+
+3、为什么要面向对象
+1、为了方便编写代码
+2、便于管理代码
+
+
+面向对象的基本模型
+将数据与功能封装成函数(方法)
+将相关的功能绑定到一起(对象)
+将功能进行分组(模块)
+
+在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象">
+<meta property="og:url" content="http://yoursite.com/2016/11/11/面向对象/index.html">
 <meta property="og:site_name" content="Mrbinbindeng">
+<meta property="og:description" content="面向对象[TOC]
+1、什么是面向对象
+对象：
+你所想用编程语言来描述的 事物
+
+
+对面向过程的封装。函数是一个封装，面向对象是比函数封装更高级的封装
+利用对象解决我问题
+
+2、与面向过程的区别
+面向对象封装了面向过程
+
+3、为什么要面向对象
+1、为了方便编写代码
+2、便于管理代码
+
+
+面向对象的基本模型
+将数据与功能封装成函数(方法)
+将相关的功能绑定到一起(对象)
+将功能进行分组(模块)
+
+在">
+<meta property="og:updated_time" content="2016-11-11T13:46:26.369Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mrbinbindeng">
+<meta name="twitter:title" content="面向对象">
+<meta name="twitter:description" content="面向对象[TOC]
+1、什么是面向对象
+对象：
+你所想用编程语言来描述的 事物
+
+
+对面向过程的封装。函数是一个封装，面向对象是比函数封装更高级的封装
+利用对象解决我问题
+
+2、与面向过程的区别
+面向对象封装了面向过程
+
+3、为什么要面向对象
+1、为了方便编写代码
+2、便于管理代码
+
+
+面向对象的基本模型
+将数据与功能封装成函数(方法)
+将相关的功能绑定到一起(对象)
+将功能进行分组(模块)
+
+在">
   
     <link rel="alternative" href="/atom.xml" title="Mrbinbindeng" type="application/atom+xml">
   
@@ -164,178 +234,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-原型的call" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/11/原型的call/" class="article-date">
-  	<time datetime="2016-11-11T13:47:50.000Z" itemprop="datePublished">2016-11-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/11/原型的call/">
-        原型的call
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Function-prototype补充-call和apply和bind"><a href="#Function-prototype补充-call和apply和bind" class="headerlink" title="Function.prototype补充(call和apply和bind)"></a>Function.prototype补充(<code>call</code>和<code>apply</code>和<code>bind</code>)</h1><ul>
-<li><p><strong><code>Function.prototype</code>自身是一个</strong>函数<strong>，且是唯一一个没有<code>prototype</code>属性的函数</strong></p>
-<blockquote>
-<p><code>({}).toString.call(Function.prototype)</code><br><code>//  结果 &quot;[object Function]&quot;</code></p>
-</blockquote>
-</li>
-<li><p><code>arguments</code></p>
-<ul>
-<li>之前函数的属性，现已废弃</li>
-</ul>
-</li>
-<li><code>caller</code><ul>
-<li>返回调用该函数的函数</li>
-</ul>
-</li>
-<li><code>constructor</code><ul>
-<li>指向对应的构造函数，即<code>Function</code></li>
-</ul>
-</li>
-<li><code>length</code><ul>
-<li>形参个数</li>
-</ul>
-</li>
-<li><code>name</code><ul>
-<li>函数名</li>
-</ul>
-</li>
-<li><code>toString</code><ul>
-<li>转换为字符串</li>
-</ul>
-</li>
-<li><code>__proto__</code><ul>
-<li><code>Function.prototype</code>所继承的对象，即<code>Object.prototype</code></li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p><code>apply</code></p>
-<ul>
-<li>改变函数执行时内部this指向</li>
-<li><p><strong>语法：</strong></p>
-<ul>
-<li>1、<code>函数名.apply( this指向，[实参1, 实参2....] )</code></li>
-<li>2、<code>函数名.apply( this指向，{0: 实参1, 1: 实参2, length: 2} )</code></li>
-</ul>
-</li>
-<li><p><strong>注意：</strong></p>
-<ul>
-<li>第一个参数只是为了指定函数执行时this的指向，并不会作为参数传进去</li>
-<li>第二个参数要求是<strong>数组或伪数组</strong>，apply会自动把数组中的内容平铺后传入到函数中</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, b</span>)  </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a + b);</div><div class="line">&#125;</div><div class="line">add.apply(<span class="number">300</span>, [<span class="number">50</span>, <span class="number">50</span>]);  <span class="comment">// 数组	结果100</span></div><div class="line">add.apply(<span class="number">300</span>, &#123; <span class="number">0</span>:<span class="number">20</span>, <span class="number">1</span>:<span class="number">20</span>, <span class="attr">length</span>:<span class="number">2</span> &#125;);  <span class="comment">// 伪数组	结果40</span></div></pre></td></tr></table></figure>
-<ul>
-<li><code>call</code><ul>
-<li>改变函数执行时内部this指向</li>
-<li><strong>语法：</strong><ul>
-<li><code>函数名.call( this指向，实参1, 实参2.... )</code></li>
-</ul>
-</li>
-<li><strong>注意：</strong><ul>
-<li>第一个参数只是为了指定函数执行时this的指向，并不会作为参数传进去，后面的才是要传入执行的参数</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, b</span>)  </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a + b);</div><div class="line">&#125;</div><div class="line">add.call(<span class="number">300</span>, <span class="number">10</span>, <span class="number">20</span>);  <span class="comment">// 300 不参加传入函数，结果为30</span></div></pre></td></tr></table></figure>
-<ul>
-<li><code>bind</code><strong>（ES5提供的方法）</strong><ul>
-<li>返回一个<code>函数的copy版本</code>，并且可以指定该函数执行时内部this的指向</li>
-<li><strong>语法：</strong><ul>
-<li><code>var fn = 函数名.bind( this指向，要绑定的实参1, 要绑定的实参2.... );</code></li>
-</ul>
-</li>
-<li><strong>返回值：</strong><ul>
-<li>函数的copy版本</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> baseNumber = <span class="number">0</span>;</div><div class="line"><span class="keyword">var</span> o = &#123;<span class="attr">baseNumber</span>:<span class="number">100</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, b, c</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.baseNumber + a + b + c);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 1、bind基本使用：</span></div><div class="line"><span class="keyword">var</span> fn = add.bind(o);</div><div class="line">fn(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line">fn(<span class="number">1</span>,<span class="number">2</span>,<span class="number">54</span>);</div><div class="line"></div><div class="line"><span class="comment">// 2、bind绑定实参的使用：</span></div><div class="line"><span class="comment">// 如果前两个参数一直是10，</span></div><div class="line"><span class="comment">// 就可以通过bind绑定死，以后就不用传了</span></div><div class="line"><span class="keyword">var</span> fn = add.bind(o, <span class="number">10</span>, <span class="number">10</span>); <span class="comment">// 相当于固定形参a为10，形参b为10</span></div><div class="line">fn(<span class="number">50</span>);  <span class="comment">// 调用fn时，只需再传形参c的值即可</span></div><div class="line">fn(<span class="number">30</span>); <span class="comment">// 调用fn时，只需再传形参c的值即可</span></div></pre></td></tr></table></figure>
-<hr>
-<p><strong><code>call</code>和<code>apply</code>和<code>bind</code></strong></p>
-<ul>
-<li>都是来自于<code>Function.prototype</code>，所以所有函数都可以使用</li>
-<li>call和apply方法会马上执行</li>
-<li>bind不会马上执行，会返回一个函数的copy版本，供以后执行时调用</li>
-<li><p><strong>共同点：</strong></p>
-<ul>
-<li>是可以指定<strong>这个函数</strong>执行时内部this的指向</li>
-</ul>
-</li>
-<li><p><strong>不同点：</strong></p>
-<ul>
-<li>传参形式不同</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>方法借用</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 借用数组的push方法，给obj对象按照下标添加属性值</span></div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line">[].push.call(obj, <span class="number">1</span>);</div><div class="line">[].push.call(obj, <span class="number">10</span>);</div><div class="line"><span class="built_in">console</span>.log(obj);</div><div class="line"></div><div class="line"><span class="comment">// 借用数组的pop方法，删除伪数组o对象最后一个下标属性值</span></div><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">    <span class="number">0</span>: <span class="number">10</span>,</div><div class="line">    <span class="number">1</span>: <span class="number">20</span>,</div><div class="line">    <span class="number">2</span>: <span class="number">30</span>,</div><div class="line">    <span class="attr">length</span>: <span class="number">3</span></div><div class="line">&#125;;</div><div class="line">[].pop.call(o);</div><div class="line"><span class="built_in">console</span>.log(o);</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>构造函数借用</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">	Person.call( <span class="keyword">this</span>, name, age );</div><div class="line">&#125;</div><div class="line"><span class="comment">// 想给Student的实例也添加name和age属性</span></div><div class="line"><span class="comment">// new Student执行时，其函数内的this指向小红(即小红就是this，this就是小红)</span></div><div class="line"><span class="comment">// 那么我想要Person执行时，它里面的this指向小红</span></div><div class="line"><span class="comment">// 我就可以通过call指定Person里面的this为小红</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> xiaohong = <span class="keyword">new</span> Student(<span class="string">'小红'</span>, <span class="number">16</span>);</div><div class="line"><span class="built_in">console</span>.log(xiaohong);</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>把一个伪数组转换为真数组(<code>[].slice.call(obj)</code>)</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    <span class="number">0</span>: <span class="number">100</span>,</div><div class="line">    <span class="number">1</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">length</span>: <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// slice可以通过一个旧数组，截取获取一个新数组</span></div><div class="line"><span class="built_in">console</span>.log([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].slice(<span class="number">0</span>, <span class="number">1</span>));<span class="comment">//[1]</span></div><div class="line"><span class="built_in">console</span>.log([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].slice());<span class="comment">// [1, 2, 3]</span></div><div class="line"><span class="built_in">console</span>.log([].slice.call(obj));<span class="comment">// [100, 200]</span></div><div class="line"></div><div class="line"><span class="comment">// 获取最大值</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMax</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 借用apply平铺arguments，给max方法传参</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, <span class="built_in">arguments</span>));</div><div class="line">&#125;</div><div class="line">getMax(<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">20</span>); <span class="comment">// 20</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/11/11/面向对象/" class="article-date">
@@ -351,15 +250,21 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/11/面向对象/">
-        面向对象
-        
-      </a>
+    <h1 class="article-title" itemprop="name">
+      面向对象
+      
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -514,28 +419,46 @@ ES6中可以把构造函数看作类
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/11/原型的call/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          原型的call
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
 
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -559,8 +482,8 @@ ES6中可以把构造函数看作类
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
