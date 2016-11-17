@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>node01 | Mrbinbindeng</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.1node的调试
+前两样调试用于面试
+node自带的debug调试命令 n下一步 s步入 o步出
+node-debug foo.js node-inspector
+vsc 推荐使用
+vsc launch.json
+抽风式的好使
+ws1.2 es6
+用es新特性之前加上严格模式
+什么是es？
+为什么用es的新标准？
+为什么前端不用，node要用？es6定义了一个标准—-&amp;gt;let命令—-&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node01">
+<meta property="og:url" content="http://yoursite.com/2016/11/17/node05/index.html">
+<meta property="og:site_name" content="Mrbinbindeng">
+<meta property="og:description" content="1.1node的调试
+前两样调试用于面试
+node自带的debug调试命令 n下一步 s步入 o步出
+node-debug foo.js node-inspector
+vsc 推荐使用
+vsc launch.json
+抽风式的好使
+ws1.2 es6
+用es新特性之前加上严格模式
+什么是es？
+为什么用es的新标准？
+为什么前端不用，node要用？es6定义了一个标准—-&amp;gt;let命令—-&amp;g">
+<meta property="og:updated_time" content="2016-11-17T12:32:23.188Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node01">
+<meta name="twitter:description" content="1.1node的调试
+前两样调试用于面试
+node自带的debug调试命令 n下一步 s步入 o步出
+node-debug foo.js node-inspector
+vsc 推荐使用
+vsc launch.json
+抽风式的好使
+ws1.2 es6
+用es新特性之前加上严格模式
+什么是es？
+为什么用es的新标准？
+为什么前端不用，node要用？es6定义了一个标准—-&amp;gt;let命令—-&amp;g">
+  
+    <link rel="alternative" href="/atom.xml" title="Mrbinbindeng" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dengbinbin</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/winnerweb/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dengbinbin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dengbinbin</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-node05" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/17/node05/" class="article-date">
+  	<time datetime="2016-11-17T12:24:22.000Z" itemprop="datePublished">2016-11-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      node01
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-1node的调试"><a href="#1-1node的调试" class="headerlink" title="1.1node的调试"></a>1.1node的调试</h3><ul>
+<li>前两样调试用于面试</li>
+<li>node自带的debug调试命令 n下一步 s步入 o步出</li>
+<li>node-debug foo.js node-inspector</li>
+<li>vsc 推荐使用</li>
+<li>vsc launch.json</li>
+<li>抽风式的好使</li>
+<li>ws<h3 id="1-2-es6"><a href="#1-2-es6" class="headerlink" title="1.2 es6"></a>1.2 es6</h3></li>
+<li>用es新特性之前加上严格模式</li>
+<li>什么是es？</li>
+<li>为什么用es的新标准？</li>
+<li>为什么前端不用，node要用？<br>es6定义了一个标准—-&gt;let命令—-&gt;js代码里面写了let—-&gt;v8引擎解析，能解析说明支持了es6里的let命令—-&gt;node升级了</li>
+<li>严格模式</li>
+<li>let</li>
+<li>const</li>
+<li>块级作用域{}<br>let foo =456;<br>{<br>let foo =123;<br>}<br>console.log(foo);</li>
+<li>字符串的扩展  includes(str) startsWith(str) endsWith(str) repeat(num) <code>${变量名}</code><br>var bar=’暗示的反思’<br>var foo=’123’+’阿斯顿发斯蒂芬’+bar+’是短发飞’;<br>var foo2=<code>阿斯顿发斯蒂芬${bar}是短发飞</code></li>
+<li>箭头函数、</li>
+<li>let const 箭头函数 用来看api使用<h3 id="1-3-buffer"><a href="#1-3-buffer" class="headerlink" title="1.3 buffer"></a>1.3 buffer</h3></li>
+<li>创建Buffer</li>
+<li>Buffer的一些属性和方法</li>
+<li>Buffer的一些属性和方法<ul>
+<li>buf[index] 通过下标访问 buffer 的某个字节的数据</li>
+<li>buf.indexOf(value,[byteOffset],[encoding]) 查找某个字符在 buffer 内存中的字节下标</li>
+<li>buf.includes(value,[byteOffset],[encoding])</li>
+<li>buf.length</li>
+<li>buf.slice([start,[end]])</li>
+<li>buf.toString([encoding],[start], [end])</li>
+<li>buf.write(string,[offset],[length],[encoding])<h3 id="1-4-文件流"><a href="#1-4-文件流" class="headerlink" title="1.4 文件流"></a>1.4 文件流</h3></li>
+</ul>
+</li>
+<li>流对象 stream</li>
+<li>pipe（）<h2 id="2-网络编程"><a href="#2-网络编程" class="headerlink" title="2.网络编程"></a>2.网络编程</h2></li>
+</ul>
+<p>我们处于互联网时代，我们可以随时随地通过 Internet 上网、浏览新闻、玩LOL、上淘宝购物等等。<br>这些过程都发生了网络数据的交互。<br>bs browser server<br>cs client server</p>
+<p>网络编程 是指<strong>编写程序使两台联网的计算机可以完成网络数据交互，完成网络通信。</strong><br>注意：这里的计算机泛指可以上网的设备，比如PC、手机、服务器、智能电视等等。</p>
+<p>强调：网络编程重在思想，node只是一个可以帮助我们网络编程的一个工具而已。<br>使用其他编程语言或者操作系统进行网络编程，思想都是一样的。</p>
+<h3 id="什么是服务器？"><a href="#什么是服务器？" class="headerlink" title="什么是服务器？"></a>什么是服务器？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">服务器就是一个台电脑，是一台性能比较好的大电脑，它需要支持高扩展性，提供服务的</div><div class="line">服务器一旦部署好服务后，一般动的比较少，linux系统比较常用，不需要比较复杂的可视化操作界面，因为复杂的可视化操作系统比较耗资源，如win10，和windows相比linux比较安全</div><div class="line">服务器用linux的centos，ubuntu是有桌面版的</div><div class="line">服务器多用centos</div></pre></td></tr></table></figure>
+<h3 id="什么是应用服务器？"><a href="#什么是应用服务器？" class="headerlink" title="什么是应用服务器？"></a>什么是应用服务器？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">作为服务器执行共享业务应用程序的底层的系统软件</div></pre></td></tr></table></figure>
+<h3 id="什么是web服务器？"><a href="#什么是web服务器？" class="headerlink" title="什么是web服务器？"></a>什么是web服务器？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">web服务器是一种应用服务器，提供了web服务，对内提供web应用程序的的运行环境</div></pre></td></tr></table></figure>
+<p>Apache、Nginx、IIS、tomcat</p>
+<h3 id="Node-没有-Web-容器"><a href="#Node-没有-Web-容器" class="headerlink" title="Node 没有 Web 容器"></a>Node 没有 Web 容器</h3><p>如果我用js写了一个web应用程序，那么node就是web服务器<br>.net平台的 ASP或者ASP.net 需要 IIS 作为服务器容器，<br>PHP需要搭载 Apache 或者 Nginx 作为服务器容器，<br>Java 的 JSP 需要 tomcat 作为服务器容器，<br>ruby 的 ruby on rails 需要 搭配 Apache 等作为自己的服务器容器。。。</p>
+<p>Node，不需要服务器容器。</p>
+<p>Node，不需要服务器容器。</p>
+<p>Node，不需要服务器容器。</p>
+<h3 id="为什么叫-Node"><a href="#为什么叫-Node" class="headerlink" title="为什么叫 Node"></a>为什么叫 Node</h3><p>Node是一个面向网络而生的平台。</p>
+<p>Ryan Dahl 在创建Node项目的时候给它起了一个名字叫做 web.js ，就是一个Web服务器。<br>类似于 Apache、tomcat、IIS 等服务器软件。</p>
+<p>web.js 的发展超出了作者的最初想法，变成了构建网络应用的一个基础平台。<br>然后就可以在这个基础平台之上构建很多东西，比如服务器、客户端、各种各样的命令行工具等。</p>
+<p>Node的目标就是成为一个构建快速、可伸缩的网络应用平台。</p>
+<p>每一个Node进程构成网络应用中的一个节点。这就是 Node 的含义。</p>
+<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><p>代理，委托一个人帮我去做事情，上网代理，就是我上网的时候如果上网被墙了，我可以用代理帮我们去上网。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">nginx除了是个web服务器还能够做反向代理服务器，</div><div class="line">反向代理服务器的作用，可以用来做负载均衡</div><div class="line">代理，委托一个人帮我去做事情，上网代理，就是我上网的时候如果上网被墙了，我可以用代理帮我们去上网。</div></pre></td></tr></table></figure></p>
+<ul>
+<li>可以用nginx来做负载均衡<h3 id="跨域的场景"><a href="#跨域的场景" class="headerlink" title="跨域的场景"></a>跨域的场景</h3>1.域名不同 （www.wuyou.com 和www.liuxi.com 即为不同的域名）<br>2.二级域名相同，子域名不同    （www.wuyou.wu.com www.liuxi.wu.com 为子域不同）<br>3.端口不同，协议不同  （ <a href="http://www.wuyou.com" target="_blank" rel="external">http://www.wuyou.com</a> 和<a href="https://www.wuyou.com属于跨域www.wuyou.con:8888和www.wuyou.con:8080" target="_blank" rel="external">https://www.wuyou.com属于跨域www.wuyou.con:8888和www.wuyou.con:8080</a>)</li>
+</ul>
+<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><ul>
+<li>双方或多方同意，并且达成共识，遵守这样的约束<h3 id="url"><a href="#url" class="headerlink" title="url"></a>url</h3><h3 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h3></li>
+</ul>
+<p>ip能够定位电脑，端口号可以定位一个应用程序<br>node 默认是3000 多了往上加</p>
+<h2 id="2-http协议"><a href="#2-http协议" class="headerlink" title="2 http协议"></a>2 http协议</h2><h3 id="2-1在地址栏输入网址后页面是如何呈现的？"><a href="#2-1在地址栏输入网址后页面是如何呈现的？" class="headerlink" title="2.1在地址栏输入网址后页面是如何呈现的？"></a>2.1在地址栏输入网址后页面是如何呈现的？</h3><ul>
+<li>DNS 把域名转化成ip DNS服务器来做这个事情 运营商提供的dns服务器</li>
+<li><p>CDN 内容分发网络</p>
+</li>
+<li><p>输入 URL：<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+</li>
+<li>DNS 域名解析<ul>
+<li>计算机无法识别域名，计算机与计算机之间要想进行通信，必须通过ip地址用来定位该计算机所在的位置</li>
+<li>在浏览器中，输入的ip地址或者域名，默认给你加了一个80端口号（对方的服务器监听的就是80端口）</li>
+<li>158.12.25.652  域名就是为了好记</li>
+<li>为了好记，所以我们的 万维网提供了 一个 域名这样的概念</li>
+<li>当你输入了 ip 地址后，浏览器会自动去 找DNS域名解析服务器，</li>
+</ul>
+</li>
+<li>将用户输入的地址封装成 HTTP Request 请求报文 发送到服务器<ul>
+<li>浏览器将用户输入的 URL 地址根据HTTP协议 封装成了  http 请求报文（请求头+请求行+请求体）</li>
+<li>该报文说白了也就是字符串而已，最终也要被转成了二进制数据再发送到服务器</li>
+</ul>
+</li>
+<li>后台服务器接收到用户HTTP Request 请求报文<ul>
+<li>后台服务器接收到 客户端发送给自己的数据（二进制数据）<ul>
+<li>首先把二进制数据按照编码解析成字符，（人类可以识别的）</li>
+<li>解析成字符之后，再按照 HTTP 协议规范中定义的格式解析出来</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>后台服务器处理用户请求信息<ul>
+<li>当得到用户请求报文之后，根据请求报文中的 get、port或者 URL、或者URL中的查询字符串或者 请求体中的数据</li>
+<li>根据用户的特定的请求数据做特定的处理</li>
+</ul>
+</li>
+<li>后台服务器将相应结果封装到 HTTP Response 响应报文中 发送给客户端<ul>
+<li>当我们解析和处理完用户请求报文消息之后</li>
+<li>服务器开始将具体的 要发送给客户端的数据 根据 HTTP 协议规范 封装成 HTTP协议响应报文</li>
+<li>响应头、响应字段、响应体</li>
+<li>该数据说白了也是具有特定格式的字符串而已，最终这个字符串也要转换成二进制数据发送到客户端</li>
+<li>发送到客户端也是通过 Socket（ip地址、端口号） 发送到了该客户单</li>
+</ul>
+</li>
+<li>用户浏览器接收到响应后开始渲染html、css，解析和执行 JavaScript 代码<ul>
+<li>当客户端解析到 服务器发送过来的 二进制数据</li>
+<li>客户端浏览器也会将 二进制数据 根据编码类型解析成 字符串</li>
+<li>然后根据 HTTP 协议，解析服务器发送过来的 响应报文</li>
+<li>然后根据响应报文中的报文内容（报文头、报文体）做具体的解析</li>
+</ul>
+</li>
+<li>当浏览器在解析的过程中遇到 一些静态资源时，会再次重复上面的步骤<h3 id="2-2HTTP协议"><a href="#2-2HTTP协议" class="headerlink" title="2.2HTTP协议"></a>2.2HTTP协议</h3>HTTP协议就是 浏览器 和 服务器 之间通信的一个数据格式规范</li>
+</ul>
+<p>在HTTP协议中，始终是以一种 一问一答 的形式在进行沟通和交流（数据交换）</p>
+<p>服务器如果没有收到浏览器的请求消息，服务器永远不会主动的发送响应消息</p>
+<p>浏览器不发出请求，服务器不会主动的发送响应</p>
+<ul>
+<li>浏览器发送请求数据到服务器</li>
+<li>服务器解析浏览器发送的请求数据</li>
+<li>服务器响应数据到客户端浏览器</li>
+</ul>
+<h3 id="2-3cookie-amp-session"><a href="#2-3cookie-amp-session" class="headerlink" title="2.3cookie&amp;session"></a>2.3cookie&amp;session</h3><ul>
+<li>http是一个无状态的协议，每次去请求服务器的时候，服务器是不能记住客户端的</li>
+<li>cookie 信物，客户端请求服务器了以后，服务器给客户端一个信物，下次客户端再请求服务器的时候，给服务器这个信物<pre><code>服务器就知道是哪个客户端了
+缺点是，不能存储太多内容、不安全
+</code></pre></li>
+<li>session 存储在服务器端的，保存着用户信息的，和cookie搭配来使用，可以用cookie里面的key对应上session里面的值<pre><code>session可以存在内存或硬盘上都可以。
+</code></pre><h3 id="2-4前后端分离"><a href="#2-4前后端分离" class="headerlink" title="2.4前后端分离"></a>2.4前后端分离</h3></li>
+</ul>
+<h3 id="2-5"><a href="#2-5" class="headerlink" title="2.5"></a>2.5</h3><h2 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h2><h3 id="通过-nodemon-实现-保存文件实时重启"><a href="#通过-nodemon-实现-保存文件实时重启" class="headerlink" title="通过 nodemon 实现 保存文件实时重启"></a>通过 nodemon 实现 保存文件实时重启</h3><ol>
+<li>安装nodemon <code>npm install -g nodemon</code></li>
+<li>基本使用 <code>nodemon server.js</code></li>
+</ol>
+<p>只要执行了上面的命令，那么当你修改了 server.js 那么nodemon会帮你自动重启 server</p>
+<h3 id="pm2"><a href="#pm2" class="headerlink" title="pm2"></a>pm2</h3><p>pm2 帮你重启node应用的</p>
+<p>###</p>
+<ul>
+<li>loaclhost</li>
+<li>127.0.0.1</li>
+<li>ip地址<br>##http模块</li>
+</ul>
+<p>res.writeHead(200,{“Content-Type”:”text/html;charset=utf-8”});</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/17/node04/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          node01
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/11/canvas/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">canvas</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Dengbinbin
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
