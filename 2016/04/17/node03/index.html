@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>node03 | Mrbinbindeng</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.0 nvm常用命令
+nvm项目地址：nvm-github地址
+查看所有已安装的本地的node版本nvm list
+切换node版本nvm use 版本号
+安装指定版本的nodenvm install 版本号 位数
+卸载已安装的指定版本的nodenvm uninstall 版本号
+
+###1.1模块的分类
+```1234567891011121314- 核心模块  + fs file syste">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node03">
+<meta property="og:url" content="http://yoursite.com/2016/04/17/node03/index.html">
+<meta property="og:site_name" content="Mrbinbindeng">
+<meta property="og:description" content="1.0 nvm常用命令
+nvm项目地址：nvm-github地址
+查看所有已安装的本地的node版本nvm list
+切换node版本nvm use 版本号
+安装指定版本的nodenvm install 版本号 位数
+卸载已安装的指定版本的nodenvm uninstall 版本号
+
+###1.1模块的分类
+```1234567891011121314- 核心模块  + fs file syste">
+<meta property="og:image" content="http://yoursite.com/./pic/event-loop.png">
+<meta property="og:updated_time" content="2016-11-29T00:43:48.055Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node03">
+<meta name="twitter:description" content="1.0 nvm常用命令
+nvm项目地址：nvm-github地址
+查看所有已安装的本地的node版本nvm list
+切换node版本nvm use 版本号
+安装指定版本的nodenvm install 版本号 位数
+卸载已安装的指定版本的nodenvm uninstall 版本号
+
+###1.1模块的分类
+```1234567891011121314- 核心模块  + fs file syste">
+<meta name="twitter:image" content="http://yoursite.com/./pic/event-loop.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Mrbinbindeng" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dengbinbin</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/winnerweb/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dengbinbin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dengbinbin</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-node03" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/17/node03/" class="article-date">
+  	<time datetime="2016-04-17T12:24:22.000Z" itemprop="datePublished">2016-04-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      node03
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-0-nvm常用命令"><a href="#1-0-nvm常用命令" class="headerlink" title="1.0 nvm常用命令"></a>1.0 nvm常用命令</h2><ul>
+<li>nvm项目地址：<a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="external">nvm-github地址</a></li>
+<li>查看所有已安装的本地的node版本<br><code>nvm list</code></li>
+<li>切换node版本<br><code>nvm use 版本号</code></li>
+<li>安装指定版本的node<br><code>nvm install 版本号 位数</code></li>
+<li>卸载已安装的指定版本的node<br><code>nvm uninstall 版本号</code></li>
+</ul>
+<p>###1.1模块的分类</p>
+<figure class="highlight plain"><figcaption><span>```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">- 核心模块</div><div class="line">  + fs file system</div><div class="line">  + http</div><div class="line">  + os</div><div class="line">  + path</div><div class="line">  + querystring</div><div class="line">  + url</div><div class="line"></div><div class="line">###1.2模块三兄弟 require、module、exports</div><div class="line"></div><div class="line">- require的实现原理</div><div class="line"></div><div class="line">```把代码从文件中读出来，用匿名函数的方式头尾包装，返回modules.exports对象，曝露出想要曝露出来的属性、方法、对象。</div><div class="line">   补充了exports是指向modules.exports的一个指针，exports能做的，modules.exports都能做的。</div></pre></td></tr></table></figure>
+<ul>
+<li>require查找文件、包原理</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">第二次加载的时候优先从缓存查找读取，</div><div class="line">node_modules中没有的，从父文件夹中查找，如果没有，直到根目录为止</div></pre></td></tr></table></figure>
+<ul>
+<li><p>module</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">里面保存了模块的信息路径、父子信息、曝露出的对象信息</div></pre></td></tr></table></figure>
+</li>
+<li><p>exports</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.exports 别名</div><div class="line">module.exports=123;已经使用过一次了，exports就不生效了</div><div class="line">module.exports.a=12;这样使用,exports是还可以使用的</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###1.4包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">package.json是包的说明书，</div><div class="line">dependencies当前包所依赖的包：&gt;、&lt;、&gt;=、&lt;=、~、*、&quot; &quot;、X、^</div><div class="line"> devDependencies 开发环境中包所依赖的包：</div></pre></td></tr></table></figure></p>
+<p>###1.5npm<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">npm init  创建package.json文件</div><div class="line">npm install  将package.json中的文件依赖的包从网上下载到本地</div><div class="line">npm install -save 包名  将包下载下来并且加载到dependencies中去</div><div class="line">npm i -S 包名 替代上面的命令</div><div class="line">npm install -save-dev 包名 将包下载下来并且加载到devDependencies中去</div><div class="line">npm i -D 包名 替代上面的命令</div><div class="line">npm install -g 包名 全局安装  安装的是全局工具</div><div class="line">npm docs 包名 查看包的文档</div></pre></td></tr></table></figure></p>
+<p>###1.6nrm npm的数据源管理工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">nrm ls 查看npm的数据源</div><div class="line">nrm use 切换npm下载包的地址</div><div class="line">nrm test  测试下哪个数据源快</div></pre></td></tr></table></figure></p>
+<h3 id="1-7-3m"><a href="#1-7-3m" class="headerlink" title="1.7 3m"></a>1.7 3m</h3><p>npm node的包管理工具<br>nvm node的版本管理工具<br>nrm npm的数据源管理工具</p>
+<p>###1.8箭头函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">语法糖替代function()&#123;&#125;  v=&gt;v</div></pre></td></tr></table></figure></p>
+<p>#2.i/o</p>
+<p>###2.1什么是i/o？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">io input、output 输入输出，电脑的输入输出，例如音频录音表示声音输入、听音乐是声音的输出</div><div class="line">网络上的传输全部是在传字符串，i/o在服务器上可以理解为读写操作。</div></pre></td></tr></table></figure>
+<p>###2.2什么是并发？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">一个时间段中有几个程序都处于已启动运行到运行完毕之间。</div></pre></td></tr></table></figure></p>
+<p>#3异步i/o与事件驱动</p>
+<p>###3.1什么是进程？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">进程是为运行当中的应用程序提供运行环境的</div><div class="line">一个运行当中的应用程序就会有一个进程与之相对应</div></pre></td></tr></table></figure></p>
+<p>###3.2什么是线程？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">线程是用来运行应用程序中代码的，</div><div class="line">一个线程在一个时间只能做一件事件。</div><div class="line">多线程，调度起来很麻烦。</div><div class="line">node是单线程执行，用异步替代了多线程</div></pre></td></tr></table></figure></p>
+<p>###3.3同步、异步有什么不同？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">异步不会阻塞后面的代码，同步会阻塞后面的代码</div><div class="line">一条线程先执行同步的代码后执行异步的代码。</div></pre></td></tr></table></figure></p>
+<p>###3.4异步非i/o操作和异步i/o操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">异步非io setTimeout setInterval</div><div class="line">异步IO操作 操作文件 网络操作 fs</div></pre></td></tr></table></figure></p>
+<p>###3.5node的事件驱动模型？<br><img src="./pic/event-loop.png" alt="Alt text"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>###3.5异步和多线程的比较？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node的异步是帮助我们去做了多线程的操作，简化了代码</div></pre></td></tr></table></figure></p>
+<p>#4.文件操作</p>
+<p>###4.1文件的完整读写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fs模块---》操作文件---》io----》node的特长</div><div class="line">fs模块是node非常重要的模块，能体现出node的优势</div></pre></td></tr></table></figure></p>
+<ul>
+<li>fs.readFile()  读文件</li>
+<li>fs.writeFile()  写文件</li>
+<li>fs.appendFile() 在文件的内部去追加写一些内容</li>
+<li>fs.mkdir() 创建文件夹</li>
+<li>fs.readdir() 读文件夹</li>
+<li>fs.access() 判断路径</li>
+<li>fs.stat()<br>isFile：用于判断被查看的对象是否为一个文件，如果是返回true，否则，返回false；<br>isDirectory：用于判断被查看的对象是否为一个目录，如果是的话则返回true，否则，返回false；<br>isBlockDevice：用于判断被查看的文件是否为一个块设备文件，如果是的话则返回true，否则，返回false(仅在Unix操作系统下有效)；<br>isCharacterDevice：用于判断被查看的文件是否为一个字符设备文件，如果是的话则返回true，否则，返回false(仅在Unix操作系统下有效)；<br>isSymbolicLink：用于判断被查看的文件是否为一个符号链接文件，如果是的话则返回true，否则，返回false。该方法仅在lstat方法的回调函数中有效；<br>isFIFO：用于判断被查看的文件是否为一个FIFO，如果是的话则返回true，否则，返回false(仅在Unix操作系统下有效)；<br>isSocket：用于判断被查看的文件是否为一个socket文件，如果是的话则返回true，否则，返回false(仅在Unix操作系统下有效)；</li>
+</ul>
+<p>#5.path</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/17/node02/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          node02
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/17/node05/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">node05</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Dengbinbin
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

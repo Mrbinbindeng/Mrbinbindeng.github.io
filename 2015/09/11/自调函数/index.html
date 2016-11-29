@@ -3,58 +3,106 @@
 <head>
   <meta charset="utf-8">
   
-  <title>预解析 | Mrbinbindeng</title>
+  <title>自调函数 | Mrbinbindeng</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="闭包(函数)[TOC]
+  <meta name="description" content="自调函数(四种自调模式及this指向)
+全局变量污染：
 
-1、广义闭包
-可以访问 非自身的变量 的 函数从一种角度说所有函数都是闭包另一种角度说只有使用了非自身变量的函数，才是闭包
-2、狭义闭包
-可以访问非自身的局部变量的函数(面试说)一种说法，函数内的函数才是闭包另一种说法，使用了非自身局部变量的函数才是闭包
-特点：可以通过闭包在任何地方操作局部变量
-
-生命周期
-一个生物，生命从开始到结束，中间存活的过程叫生命周期
+过多的全局变量，极易出现冲突与混淆
 
 
-变量的">
+自调函数
+
+沙箱模式
+命名空间-
+调用window的方法时，给自调函数传入window参数，一般有两个作用：
+1、提升全局变量的查找时间
+2、有助于代码压缩
+
+
+
+
+
+函数的四种自调模式
+1、函数调用模式：
+
+语法：
+函数名();
+
+
+函数内部this指向全局对象(window)
+
+
+2、方法调用模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="预解析">
-<meta property="og:url" content="http://yoursite.com/2015/11/11/预解析/index.html">
+<meta property="og:title" content="自调函数">
+<meta property="og:url" content="http://yoursite.com/2015/09/11/自调函数/index.html">
 <meta property="og:site_name" content="Mrbinbindeng">
-<meta property="og:description" content="闭包(函数)[TOC]
+<meta property="og:description" content="自调函数(四种自调模式及this指向)
+全局变量污染：
 
-1、广义闭包
-可以访问 非自身的变量 的 函数从一种角度说所有函数都是闭包另一种角度说只有使用了非自身变量的函数，才是闭包
-2、狭义闭包
-可以访问非自身的局部变量的函数(面试说)一种说法，函数内的函数才是闭包另一种说法，使用了非自身局部变量的函数才是闭包
-特点：可以通过闭包在任何地方操作局部变量
-
-生命周期
-一个生物，生命从开始到结束，中间存活的过程叫生命周期
+过多的全局变量，极易出现冲突与混淆
 
 
-变量的">
-<meta property="og:updated_time" content="2016-11-11T14:18:03.008Z">
+自调函数
+
+沙箱模式
+命名空间-
+调用window的方法时，给自调函数传入window参数，一般有两个作用：
+1、提升全局变量的查找时间
+2、有助于代码压缩
+
+
+
+
+
+函数的四种自调模式
+1、函数调用模式：
+
+语法：
+函数名();
+
+
+函数内部this指向全局对象(window)
+
+
+2、方法调用模式">
+<meta property="og:updated_time" content="2016-11-29T00:40:43.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="预解析">
-<meta name="twitter:description" content="闭包(函数)[TOC]
+<meta name="twitter:title" content="自调函数">
+<meta name="twitter:description" content="自调函数(四种自调模式及this指向)
+全局变量污染：
 
-1、广义闭包
-可以访问 非自身的变量 的 函数从一种角度说所有函数都是闭包另一种角度说只有使用了非自身变量的函数，才是闭包
-2、狭义闭包
-可以访问非自身的局部变量的函数(面试说)一种说法，函数内的函数才是闭包另一种说法，使用了非自身局部变量的函数才是闭包
-特点：可以通过闭包在任何地方操作局部变量
-
-生命周期
-一个生物，生命从开始到结束，中间存活的过程叫生命周期
+过多的全局变量，极易出现冲突与混淆
 
 
-变量的">
+自调函数
+
+沙箱模式
+命名空间-
+调用window的方法时，给自调函数传入window参数，一般有两个作用：
+1、提升全局变量的查找时间
+2、有助于代码压缩
+
+
+
+
+
+函数的四种自调模式
+1、函数调用模式：
+
+语法：
+函数名();
+
+
+函数内部this指向全局对象(window)
+
+
+2、方法调用模式">
   
     <link rel="alternative" href="/atom.xml" title="Mrbinbindeng" type="application/atom+xml">
   
@@ -204,11 +252,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-预解析" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-自调函数" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/11/预解析/" class="article-date">
-  	<time datetime="2015-11-11T13:59:14.000Z" itemprop="datePublished">2015-11-11</time>
+      <a href="/2015/09/11/自调函数/" class="article-date">
+  	<time datetime="2015-09-11T13:52:09.000Z" itemprop="datePublished">2015-09-11</time>
 </a>
     </div>
   
@@ -221,7 +269,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      预解析
+      自调函数
       
     </h1>
   
@@ -239,54 +287,79 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="闭包-函数"><a href="#闭包-函数" class="headerlink" title="闭包(函数)"></a>闭包(函数)</h1><p>[TOC]</p>
-<blockquote>
-<p>1、广义闭包</p>
-<p>可以访问 <strong>非自身的变量</strong> 的 <strong>函数</strong><br>从一种角度说所有函数都是闭包<br>另一种角度说只有使用了非自身变量的函数，才是闭包</p>
-<p>2、狭义闭包</p>
-<p>可以访问<strong>非自身</strong>的<strong>局部变量</strong>的<strong>函数</strong>(<em>面试说</em>)<br>一种说法，<strong>函数内的函数</strong>才是闭包<br>另一种说法，使用了非自身<strong>局部变量</strong>的函数才是闭包</p>
-<p><strong>特点：</strong><br>可以通过闭包<strong>在任何地方</strong>操作<strong>局部变量</strong></p>
-</blockquote>
-<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><blockquote>
-<p>一个生物，生命从开始到结束，中间存活的过程叫生命周期</p>
-</blockquote>
+        <h1 id="自调函数-四种自调模式及this指向"><a href="#自调函数-四种自调模式及this指向" class="headerlink" title="自调函数(四种自调模式及this指向)"></a>自调函数(四种自调模式及this指向)</h1><ul>
+<li><p>全局变量污染：</p>
 <ul>
-<li><p><strong>变量的生命周期：</strong></p>
-<blockquote>
-<p>一个变量，从<strong>定义</strong>开始，到<strong>释放</strong>结束，<strong>中间存活的过程</strong>叫变量的生命周期</p>
-</blockquote>
-</li>
-<li><p><strong>全局变量的生命周期：</strong></p>
-<blockquote>
-<p>从<strong>定义</strong>开始，到<strong>页面被卸载结束</strong>，就是全局变量的生命周期</p>
-</blockquote>
-</li>
-<li><p><strong>局部变量的生命周期：</strong></p>
-<blockquote>
-<p> 从<strong>定义</strong>开始，到<strong>函数执行完毕结束</strong>，就是局部变量的生命周期<br> <strong>但是，</strong>可以通过闭包实现影响局部变量的生命周期，使生命周期和闭包一样长</p>
-<p> <strong>问题：</strong><br> 如果一个变量一直存储着一个闭包函数，那么js引擎无法得知将来是否还会调用这个函数，所以就会造成这个函数不会被释放，相应的这个函数占用的局部变量也不会被释放，这就造成了内存浪费<br> 如果确定以后不会再使用这个函数了，最好手动将存储这个函数的变量赋值为 <code>null</code></p>
-</blockquote>
-</li>
+<li>过多的全局变量，极易出现冲突与混淆</li>
 </ul>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><blockquote>
-<p>一个东西所依赖东西，就可以认为是它的环境</p>
-</blockquote>
+</li>
+<li><p>自调函数</p>
 <ul>
-<li><strong>执行环境：</strong><blockquote>
-<p>代码执行时所依赖的环境<br><strong>函数被调用一次，就会产生一个执行环境</strong></p>
-</blockquote>
-</li>
-</ul>
-<h3 id="闭包应用场景"><a href="#闭包应用场景" class="headerlink" title="闭包应用场景"></a>闭包应用场景</h3><ul>
-<li>操作私有属性(局部变量)<ul>
-<li>为了防止其他地方对该属性随意修改的隐患</li>
-</ul>
-</li>
-<li>变量的状态：<ul>
-<li>指变量不同时期所存储的值</li>
+<li>沙箱模式</li>
+<li>命名空间<br>-</li>
+<li>调用window的方法时，给自调函数传入window参数，一般有两个作用：<ul>
+<li>1、提升全局变量的查找时间</li>
+<li>2、有助于代码压缩</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<h3 id="函数的四种自调模式"><a href="#函数的四种自调模式" class="headerlink" title="函数的四种自调模式"></a>函数的四种自调模式</h3><ul>
+<li><p><strong>1、函数调用模式：</strong></p>
+<ul>
+<li><strong>语法：</strong><ul>
+<li><code>函数名();</code></li>
+</ul>
+</li>
+<li>函数内部<code>this</code>指向全局对象<code>(window)</code></li>
+</ul>
+</li>
+<li><p><strong>2、方法调用模式</strong></p>
+<ul>
+<li><strong>语法：</strong><ul>
+<li><code>对象.函数名();</code> || <code>对象[函数名] ()</code></li>
+</ul>
+</li>
+<li>函数内部<code>this</code>指向该方法<code>所属的对象</code></li>
+</ul>
+</li>
+<li><p><strong>3、构造器调用模式(<em>构造函数</em>)</strong></p>
+<ul>
+<li><strong>语法：</strong><ul>
+<li><code>new 函数名()</code> || <code>new 对象[函数名] ()</code> || <code>new 对象.函数名();</code></li>
+</ul>
+</li>
+<li>函数内部<code>this</code>指向该构造函数<code>新创建的实例</code></li>
+</ul>
+</li>
+<li><p><strong>4、上下文调用模式</strong>(<strong>间接调用模式</strong>)</p>
+<ul>
+<li>模式1：（call）<ul>
+<li><code>函数名.call()</code> || <code>对象.函数名.call()</code> || <code>对象[函数名].call()</code></li>
+</ul>
+</li>
+<li><p>模式2：（apply）</p>
+<ul>
+<li><p><code>函数名.apply()</code> || <code>对象.函数名.apply()</code> || <code>对象[函数名].apply()</code></p>
+</li>
+<li><p>语法：</p>
+<ul>
+<li><code>函数名.call(指定函数执行时其内部的this指向的对象)</code></li>
+<li><code>函数名.apply(指定函数执行时其内部的this指向的对象)</code></li>
+</ul>
+</li>
+<li>特殊情况：<ul>
+<li><code>null</code> 和 <code>undefined</code> 和 <code>&#39;&#39;</code>内部this指向<code>window</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">fn.call([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]);</div><div class="line">fn.call(<span class="keyword">new</span> <span class="built_in">Date</span>);</div><div class="line"></div><div class="line">fn.apply([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]);</div><div class="line">fn.apply(<span class="keyword">new</span> <span class="built_in">Date</span>);</div></pre></td></tr></table></figure>
+<p><strong>由以上四种不同模式的函数调用，this的指向不同说明函数中的this和函数调用有关，和定义无关</strong></p>
 
       
     </div>
@@ -296,18 +369,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/17/node01/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/09/11/继承/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          node01
+          继承
         
       </div>
     </a>
   
   
-    <a href="/2015/09/11/canvas/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">canvas</div>
+    <a href="/2015/09/11/原型的call/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">原型的call</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
