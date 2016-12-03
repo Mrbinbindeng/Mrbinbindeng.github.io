@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>app开发环境搭建2 | Mrbinbindeng</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="webpack
+官方网站
+
+webpack 最终会把所有js文件合并在一起!
+
+开发时可以单独开发
+
+02.button
+
+获取dom对象
+
+
+
+给这个对象设置value值
+
+
+
+给这个对象注册事件
+
+
+
+03 使用配置文件的方式使用webpack
+webpack会自动读取这个文件里的配置。
+
+// webpack.config.js12345678910    var path = requir">
+<meta property="og:type" content="article">
+<meta property="og:title" content="app开发环境搭建2">
+<meta property="og:url" content="http://yoursite.com/2016/05/20/webpack工具的使用/index.html">
+<meta property="og:site_name" content="Mrbinbindeng">
+<meta property="og:description" content="webpack
+官方网站
+
+webpack 最终会把所有js文件合并在一起!
+
+开发时可以单独开发
+
+02.button
+
+获取dom对象
+
+
+
+给这个对象设置value值
+
+
+
+给这个对象注册事件
+
+
+
+03 使用配置文件的方式使用webpack
+webpack会自动读取这个文件里的配置。
+
+// webpack.config.js12345678910    var path = requir">
+<meta property="og:updated_time" content="2016-12-03T12:12:34.018Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="app开发环境搭建2">
+<meta name="twitter:description" content="webpack
+官方网站
+
+webpack 最终会把所有js文件合并在一起!
+
+开发时可以单独开发
+
+02.button
+
+获取dom对象
+
+
+
+给这个对象设置value值
+
+
+
+给这个对象注册事件
+
+
+
+03 使用配置文件的方式使用webpack
+webpack会自动读取这个文件里的配置。
+
+// webpack.config.js12345678910    var path = requir">
+  
+    <link rel="alternative" href="/atom.xml" title="Mrbinbindeng" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dengbinbin</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/winnerweb/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dengbinbin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars1.githubusercontent.com/u/22582433?v=3&amp;s=460" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dengbinbin</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Mrbinbindeng" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-webpack工具的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/20/webpack工具的使用/" class="article-date">
+  	<time datetime="2016-05-20T13:53:21.000Z" itemprop="datePublished">2016-05-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      app开发环境搭建2
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><ul>
+<li><p><a href="http://webpack.github.io" target="_blank" rel="external">官方网站</a></p>
+</li>
+<li><p>webpack 最终会把所有js文件合并在一起!</p>
+</li>
+<li>开发时可以单独开发</li>
+</ul>
+<h2 id="02-button"><a href="#02-button" class="headerlink" title="02.button"></a>02.button</h2><ul>
+<li><ol>
+<li>获取dom对象</li>
+</ol>
+</li>
+<li><ol>
+<li>给这个对象设置value值</li>
+</ol>
+</li>
+<li><ol>
+<li>给这个对象注册事件</li>
+</ol>
+</li>
+</ul>
+<h2 id="03-使用配置文件的方式使用webpack"><a href="#03-使用配置文件的方式使用webpack" class="headerlink" title="03 使用配置文件的方式使用webpack"></a>03 使用配置文件的方式使用webpack</h2><ul>
+<li>webpack会自动读取这个文件里的配置。</li>
+</ul>
+<p>// webpack.config.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line">    <span class="built_in">module</span>.exports=&#123;</div><div class="line">  <span class="comment">// 是我们文件的入口</span></div><div class="line">  entry: path.resolve(__dirname, <span class="string">'./index.js'</span>),</div><div class="line">  <span class="attr">output</span>:&#123;</div><div class="line">    <span class="comment">// 输出文件的路径</span></div><div class="line">    path:__dirname,</div><div class="line">    <span class="attr">filename</span>:<span class="string">'bundle.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h2><ul>
+<li>每一个loader都一个npm 包，需要通过npm 下载之后再使用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>:&#123;</div><div class="line">  <span class="attr">loaders</span>:[</div><div class="line">    &#123;</div><div class="line">      <span class="attr">loader</span>:<span class="string">'css-loader'</span>,</div><div class="line">      <span class="attr">test</span>:<span class="regexp">/\.css$/</span>   <span class="comment">// 指定要处理的文件</span></div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="css-loader"><a href="#css-loader" class="headerlink" title="css-loader"></a>css-loader</h3><ul>
+<li>下载: <code>npm install css-loader --save-dev</code></li>
+<li>作用:<ul>
+<li>把css内容添加到js中，以字符串的形式存在!</li>
+<li>也可以处理css中文件的引用:如:  @import ‘./base.css’</li>
+</ul>
+</li>
+</ul>
+<h3 id="style-loader"><a href="#style-loader" class="headerlink" title="style-loader"></a>style-loader</h3><ul>
+<li>下载: <code>npm install style-loader --save-dev</code></li>
+<li>作用: <ul>
+<li>把css-loader处理的结果，添加到页面，使它的样式生效<ul>
+<li>就是创建了一个style标签，添加内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>:&#123;</div><div class="line">  <span class="attr">loaders</span>:[</div><div class="line">    &#123;</div><div class="line">      <span class="attr">loader</span>:<span class="string">'style-loader!css-loader'</span> ,<span class="comment">// ! 可以理解为把右侧模块处理的结果，次给左侧</span></div><div class="line">      test:<span class="regexp">/\.css$/</span></div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="sass-loader"><a href="#sass-loader" class="headerlink" title="sass-loader"></a>sass-loader</h3><ul>
+<li>下载: <code>npm install sass-loader --save-dev</code><ul>
+<li>如果是node 5.0及以的版本还需要下一个依赖包, node-sass</li>
+</ul>
+</li>
+<li>作用: 是把scss文件内容，处理成css内容.</li>
+<li>使用: 需要配合,css-loader 和style-loader 共同使用!</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>:&#123;</div><div class="line">  <span class="attr">loaders</span>:[</div><div class="line">     &#123;</div><div class="line">      <span class="attr">test</span>:<span class="regexp">/\.scss$/</span>,</div><div class="line"></div><div class="line">      <span class="comment">// 从右往左执行，右边处理完的结果，会交给左边模块处理</span></div><div class="line">      loader:<span class="string">'style-loader!css-loader!sass-loader'</span></div><div class="line">     &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="less-loader"><a href="#less-loader" class="headerlink" title="less-loader"></a>less-loader</h3><h3 id="url-loader"><a href="#url-loader" class="headerlink" title="url-loader"></a>url-loader</h3><ul>
+<li>下载: <code>npm install url-loader --save-dev</code><ul>
+<li>如果是node5.0后的版本，需要安装: <code>npm install file-loader --save-dev</code></li>
+</ul>
+</li>
+<li>作用: 可以把css中url(./xx.jpg)里的图片转换为base64形式。</li>
+<li><p><em>注意: 使用用时，图片对应的css,要被相应的loader进行处理</em></p>
+</li>
+<li><p>使用: 要配合进行css处理的loader进行处理,专门用来处理css引用的图片！</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>:&#123;</div><div class="line">  <span class="attr">loaders</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">loader</span>:<span class="string">'style-loader!css-loader'</span>,</div><div class="line">        <span class="attr">test</span>:<span class="regexp">/\.css$/</span></div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="comment">// 这个loader 使用用时，图片对应的css,要被相应的loader进行处理</span></div><div class="line">        <span class="comment">// 大图片不希望转换为base64</span></div><div class="line">        <span class="comment">// [name] 表示使用，每个名字都不一样</span></div><div class="line">        <span class="comment">// [ext] 表示原文件的后缀</span></div><div class="line">        loader:<span class="string">'url-loader?limit=13&amp;name=./img/[name].[ext]'</span>,</div><div class="line">        <span class="comment">// limit 单位是字节</span></div><div class="line">        <span class="comment">// 1 byte = 8bit</span></div><div class="line">        <span class="comment">// 1kb = 1024</span></div><div class="line">        <span class="comment">// 1m  = 1024kb</span></div><div class="line">        <span class="comment">// name 如果写成路径的形式，还会生成相应路径!</span></div><div class="line">        test:<span class="regexp">/\.(jpeg|jpg)$/</span></div><div class="line">      &#125;</div><div class="line">      ]</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="做语法转换"><a href="#做语法转换" class="headerlink" title="做语法转换"></a>做语法转换</h3><p>babel</p>
+<ul>
+<li>es6-&gt; es5</li>
+<li>jsx(react)语法-&gt;es6</li>
+<li>… -&gt;es5</li>
+</ul>
+<h3 id="babel-loader"><a href="#babel-loader" class="headerlink" title="babel-loader"></a>babel-loader</h3><ul>
+<li><code>npm install babel-loader --save-dev</code><ul>
+<li>还需要安装babel-core</li>
+</ul>
+</li>
+<li>作用:语法转换<ul>
+<li>es6(es2015)-&gt;es5 : 安装: <code>npm install babel-preset-es2015</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">      <span class="attr">loaders</span>: [</div><div class="line">        &#123;</div><div class="line">          <span class="attr">test</span>:<span class="regexp">/\.js$/</span>,</div><div class="line">          <span class="attr">loader</span>:<span class="string">'babel-loader'</span>,</div><div class="line">          <span class="attr">query</span>:&#123;</div><div class="line"></div><div class="line">            <span class="comment">// es2015 对应 npm包是 babel-preset-es2015</span></div><div class="line">            <span class="comment">// </span></div><div class="line">            presets:[</div><div class="line">            <span class="string">'es2015'</span>,</div><div class="line">            <span class="comment">// 'react'  react对应的npm 包是 babel-preset-react</span></div><div class="line">            ] </div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      ]</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="压缩代码"><a href="#压缩代码" class="headerlink" title="压缩代码"></a>压缩代码</h3><ul>
+<li>A:<code>webpack -p</code> 加上-p参数就可以压缩代码</li>
+<li>B: 使用压缩插件<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">plugins:[</div><div class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin()</div><div class="line">]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="代码分离"><a href="#代码分离" class="headerlink" title="代码分离"></a>代码分离</h3><ul>
+<li>需要安装: <code>npm install webpack -save-dev</code></li>
+<li>希望打包时，能够将第三方的库或者框架，与我们自己的代码分开打包</li>
+<li>需要使用插件 </li>
+<li>分离打包的目的，是为了让浏览器可以缓存第三方的库或者框架。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 插件</span></div><div class="line">  plugins:[</div><div class="line">   <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(</div><div class="line">    <span class="comment">// 第一个参数是entry的一个属性</span></div><div class="line">    <span class="comment">// 第二个参数是打包后的文件名</span></div><div class="line">    <span class="comment">// 打包后的js文件里包含,vendeor001指向的所有文件</span></div><div class="line">    <span class="string">'vendor001'</span>,<span class="string">'vender.js'</span></div><div class="line">    )</div><div class="line">  ]</div></pre></td></tr></table></figure>
+<p>### </p>
+<hr>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><ul>
+<li>普通函数中的this: // <em>取决于调用者</em></li>
+<li>箭头函数中的this: // <em>取决外围代码作用域中this的指向</em></li>
+</ul>
+<hr>
+<h2 id="–watch参数"><a href="#–watch参数" class="headerlink" title="–watch参数"></a>–watch参数</h2><ul>
+<li>在执行webpack命令时，可以加上–watch参数</li>
+<li><code>webpack --watch</code> 会自动监视文件变化重新打包!</li>
+</ul>
+<h2 id="webpack-插件"><a href="#webpack-插件" class="headerlink" title="webpack 插件"></a>webpack 插件</h2><h3 id="自动打开浏览器插件-open-browser-webpack-plugin"><a href="#自动打开浏览器插件-open-browser-webpack-plugin" class="headerlink" title="自动打开浏览器插件(open-browser-webpack-plugin)"></a>自动打开浏览器插件(open-browser-webpack-plugin)</h3><ul>
+<li><a href="https://github.com/baldore/open-browser-webpack-plugin" target="_blank" rel="external">github地址</a></li>
+</ul>
+<h3 id="创建index-html插件-html-webpack-plugin"><a href="#创建index-html插件-html-webpack-plugin" class="headerlink" title="创建index.html插件(html-webpack-plugin)"></a>创建index.html插件(html-webpack-plugin)</h3><ul>
+<li><a href="https://github.com/ampedandwired/html-webpack-plugin" target="_blank" rel="external">github地址</a></li>
+</ul>
+<h3 id="删除目录插件-clean-webpack-plugin"><a href="#删除目录插件-clean-webpack-plugin" class="headerlink" title="删除目录插件(clean-webpack-plugin)"></a>删除目录插件(clean-webpack-plugin)</h3><ul>
+<li><a href="https://github.com/johnagan/clean-webpack-plugin" target="_blank" rel="external">github地址</a></li>
+</ul>
+<h3 id="拷贝文件插件-copy-webpack-plugin"><a href="#拷贝文件插件-copy-webpack-plugin" class="headerlink" title="拷贝文件插件(copy-webpack-plugin)"></a>拷贝文件插件(copy-webpack-plugin)</h3><ul>
+<li><a href="https://github.com/kevlened/copy-webpack-plugin" target="_blank" rel="external">github地址</a></li>
+</ul>
+<h2 id="开发时"><a href="#开发时" class="headerlink" title="开发时"></a>开发时</h2><ul>
+<li>项目目录的src目录（在这个目录里做开发）<ul>
+<li>这个目录可以称之为 [开发环境]</li>
+</ul>
+</li>
+<li>项目目录的dist目录(最终代码生成到这生成)<ul>
+<li>这个目录可以称之为 [生产环境]</li>
+</ul>
+</li>
+</ul>
+<h2 id="react-vue"><a href="#react-vue" class="headerlink" title="react,vue"></a>react,vue</h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/18/移动app开发框架及工具/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">app开发环境搭建2</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Dengbinbin
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
